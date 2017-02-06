@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	    <link rel="shortcut icon" href="/favicon.png">
+        <link href='main.css' rel="stylesheet">
+        <script src="http://code.colegannon.com/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://code.colegannon.com/ace/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+        <div class='title'>
+            <div class="menu">
+              <input type="checkbox" id="menu" onchange="toggleMenu(this)"/>
+              <label for="menu" class="menuLable">
+                <div class="bars bar-1"></div>
+                <div class="bars bar-2"></div>
+                <div class="bars bar-3"></div>
+              </label>
+            </div>
+            <span id='title'>HTML TESTER<span class='dot' style='color:#f1d204;'>.</span></span>
+            <button onclick='testCode()' class='test'>Test</button>
+        </div>
+        <div class="optionsContainer">
+            <div class="options">
+                <div class='SelectOnFocus'>
+                    <span id='SOF-text'>Selct On Focus</span>
+                    <input type="checkbox" class='SC-input' id='SelectOnFocus'/>
+                    <label for='SelectOnFocus' class='SC-label SOF-label' style=''>
+                        <div class='SC-lineBox SOF-box'>
+                            <div class='SC-bar1 SOF-bar1'></div>
+                            <div class='SC-bar2 SOF-bar2'></div>
+                        </div>
+                    </label>
+                </div>
+                <div class='useSameWindow'>
+                    <span>Use Same Window</span>
+                    <input checked type="checkbox" id='UseSameWindow' class="SC-input"/>
+                    <label for='UseSameWindow' class='SC-label USW-label'>
+                        <div class='SC-lineBox USW-box'>
+                            <div class='SC-bar1 USW-bar1'></div>
+                            <div class='SC-bar2 USW-bar2'></div>
+                        </div>
+                    </label>
+                </div>
+                <div class="mode">
+                    <span>HTML</span>
+                    <input id='mode' value='0' min='0' max='5' type="range">
+                    <span>Javascript</span>
+                </div>
+                <div class="blankTextArea">
+                    <button onclick='editor.setValue("")' class='clearEditor'>Clear Editor</button>
+                </div>
+                <div class="removeLocalsElement">
+                    <button onclick='removeLocals()' class='removeLocals'>Remove Locals</button>
+
+                </div>
+            </div>
+
+        </div>
+  </label>
+	    </div>
+        </div>
+        <div id="editor"></div>
+        <script src='main.js'></script>
+    </body>
+</html>
